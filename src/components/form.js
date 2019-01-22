@@ -1,30 +1,33 @@
 import React from "react";
 
-const Form = () => {
+const Form = props => {
   return (
     <div>
-      <form onSubmit={props.getWhether}>
-        <div className="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Country name"
-          />
-          <label for="cty">Email address</label>
+      <div className="card">
+        <h5 className="card-header">Search weather</h5>
+        <div className="card-body">
+          <form onSubmit={props.getWhether}>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control mb-3"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Country name"
+              />
 
-          <input
-            type="text"
-            className="form-control"
-            id="cty"
-            aria-describedby="emailHelp"
-            placeholder="City name"
-          />
+              <input
+                type="text"
+                className="form-control "
+                id="cty"
+                aria-describedby="emailHelp"
+                placeholder="City name"
+              />
+            </div>
+            <button className="btn btn-danger">Get weather</button>
+          </form>
         </div>
-        <button className="btn btn-success">Get weather</button>
-      </form>
+      </div>
     </div>
   );
 };

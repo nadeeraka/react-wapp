@@ -5,7 +5,8 @@ import API_KEY from "./util/secrets";
 import axios from "axios";
 
 class App extends Component {
-  getWhether = async () => {
+  getWhether = async e => {
+    e.preventDefault();
     const country = "sri lanka";
     const city = "bulathsinhala";
     const apiCall = await axios.get(
@@ -16,7 +17,6 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <p>{API_KEY}</p>
         <Title />
         <Form getWhether={this.getWhether} />
       </div>
