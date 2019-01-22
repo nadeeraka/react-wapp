@@ -18,7 +18,7 @@ class App extends Component {
       <div className="container">
         <p>{API_KEY}</p>
         <Title />
-        <Form />
+        <Form getWhether={this.getWhether} />
       </div>
     );
   }
