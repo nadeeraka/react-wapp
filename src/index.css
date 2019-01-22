@@ -13,6 +13,6 @@ code {
     monospace;
 }
 .cc {
-  color: red;
-  text-shadow: 2em, black;
+  color: whitesmoke;
+  text-shadow: 2em, black +;
 }
