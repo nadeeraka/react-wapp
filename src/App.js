@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Title from "./components/title";
 import Form from "./components/form";
 import API_KEY from "./util/secrets";
+import Weather from "./components/weather";
 //import axios from "axios";
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
     wind: "",
     description: "",
     main: "",
+    name: "",
     error: "",
     IsOpen: false
   };
@@ -64,7 +66,8 @@ class App extends Component {
       temp_min: data.main.temp_min,
       humidity: data.main.humidity,
       pressure: data.main.pressure,
-      wind: data.main.wind.speed,
+      wind: data.main.wind,
+      name: data.main.name,
       description: data.weather[0].description,
       main: data.weather[0].main
     });
@@ -74,6 +77,7 @@ class App extends Component {
       <div className="container">
         <Title />
         <Form getWhether={this.getWhether} />
+        <Weather />
       </div>
     );
   }
