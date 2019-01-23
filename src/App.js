@@ -5,6 +5,19 @@ import API_KEY from "./util/secrets";
 //import axios from "axios";
 
 class App extends Component {
+  state = {
+    temp: "",
+    temp_max: "",
+    temp_min: "",
+    humidity: "",
+    pressure: "",
+    wind: "",
+    description: "",
+    main: "",
+    error: "",
+    IsOpen: false
+  };
+
   getWhether = async e => {
     e.preventDefault();
 
@@ -31,6 +44,8 @@ class App extends Component {
     if (!(city.length > 1 && country.length > 1)) {
       alert("please type both fields!");
     }
+    //use regex to filter
+    //if()
     // api call
     console.log(city, country);
     const apiCall = await fetch(
@@ -42,6 +57,17 @@ class App extends Component {
     if (data.cod !== 200) {
       return alert("Server unreachable or invalid values");
     }
+    // set state
+    this.setState({
+      temp: data.main.temp,
+      temp_max: data.main.temp_max,
+      temp_min: data.main.temp_min,
+      humidity: data.main.humidity,
+      pressure: data.main.pressure,
+      wind: data.main.wind.speed,
+      description: data.weather[0].description,
+      main: data.weather[0].main
+    });
   };
   render() {
     return (
