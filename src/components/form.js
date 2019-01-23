@@ -10,6 +10,7 @@ const Form = props => {
             <div className="form-group">
               <input
                 type="text"
+                name="country"
                 className="form-control mb-3"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
@@ -18,6 +19,7 @@ const Form = props => {
 
               <input
                 type="text"
+                name="city"
                 className="form-control "
                 id="cty"
                 aria-describedby="emailHelp"
