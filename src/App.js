@@ -77,7 +77,18 @@ class App extends Component {
       <div className="container">
         <Title />
         <Form getWhether={this.getWhether} />
-        <Weather />
+        <Weather
+          temp={this.state.temp}
+          tempMax={this.state.temp_max}
+          tempMin={this.state.temp_min}
+          humidity={this.state.humidity}
+          pressure={this.state.pressure}
+          wind={this.state.wind}
+          name={this.state.name}
+          description={this.state.description}
+          main={this.state.main}
+          error={this.state.error}
+        />
       </div>
     );
   }

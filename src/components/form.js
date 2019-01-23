@@ -3,7 +3,7 @@ import React from "react";
 const Form = props => {
   return (
     <div>
-      <div className="card">
+      <div className="card os">
         <h5 className="card-header">Search weather</h5>
         <div className="card-body">
           <form onSubmit={props.getWhether}>

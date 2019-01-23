@@ -14,5 +14,18 @@ code {
 }
 .cc {
   color: whitesmoke;
-  text-shadow: 2em, black +;
+  text-shadow: 2em, black;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.ff {
+  font-family: "Open Sans", sans-serif;
+}
+.pt {
+  font-family: "PT Sans", sans-serif;
+}
+.op {
+  opacity: 0.7;
+}
+.os {
+  opacity: 0.9;
 }
