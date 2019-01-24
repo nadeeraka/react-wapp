@@ -13,7 +13,6 @@ const Form = props => {
                 name="country"
                 className="form-control mb-3"
                 id="exampleInputEmail1"
-                aria-describedby="emailHelp"
                 placeholder="Country name"
               />
 
@@ -26,7 +25,7 @@ const Form = props => {
                 placeholder="City name"
               />
             </div>
-            <button className="btn btn-danger">Get weather</button>
+            <button className="btn btn-info">Get weather</button>
           </form>
         </div>
       </div>

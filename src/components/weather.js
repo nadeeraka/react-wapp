@@ -3,8 +3,12 @@ import React from "react";
 const Weather = props => (
   <div>
     <div className="card mt-5 op">
-      <h2 className="card-header text-center text-dark ff"> Weather details</h2>
+      <h2 className="card-header text-center text-dark ff">
+        {" "}
+        {props.name} Weather details{" "}
+      </h2>
       <div className="card-body" />
+      <h4 className=" text-center text-success pt">status : {props.main}</h4>
       <h4 className=" text-center text-success pt">
         Temperature : {props.temp}
       </h4>
@@ -13,6 +17,12 @@ const Weather = props => (
       </h4>
       <h4 className=" text-center text-info pt">
         Min Temperature : {props.tempMin}
+      </h4>
+      <h4 className=" text-center text-success pt">
+        pressure : {props.pressure}
+      </h4>
+      <h4 className=" text-center text-success pt">
+        description : {props.description}
       </h4>
     </div>
   </div>
