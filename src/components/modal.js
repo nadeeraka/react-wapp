@@ -14,7 +14,7 @@ const customStyles = {
 const AlertModal = props => (
   <div>
     <Modal
-      isOpen={true}
+      isOpen={props.isOpen}
       onRequestClose={props.closeModal}
       style={customStyles}
       contentLabel="Example Modal"
