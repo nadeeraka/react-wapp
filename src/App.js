@@ -76,7 +76,7 @@ class App extends Component {
     return (
       <div className="container">
         <Title />
-        <Form getWhether={this.getWhether} />
+        <Form getWhether={this.getWhether} temp={this.state.temp} />
         <Weather
           temp={this.state.temp}
           tempMax={this.state.temp_max}
