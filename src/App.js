@@ -3,6 +3,7 @@ import Title from "./components/title";
 import Form from "./components/form";
 import API_KEY from "./util/secrets";
 import Weather from "./components/weather";
+import AlertModal from "./components/modal";
 //import axios from "axios";
 
 class App extends Component {
@@ -91,6 +92,7 @@ class App extends Component {
     return (
       <div className="container">
         <Title />
+        <AlertModal />
         <Form getWhether={this.getWhether} temp={this.state.temp} />
         <Weather
           temp={this.state.temp}
