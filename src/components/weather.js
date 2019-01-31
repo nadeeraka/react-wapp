@@ -22,12 +22,16 @@ const Weather = props => (
         <h4 className=" text-center text-success pt">
           pressure : {props.pressure}
         </h4>
-        <h4 className=" text-center text-success pt">
+        <h4 className=" text-center text-success pt mb-3">
           description : {props.description}
         </h4>
-        <div className="ml-3">
-          <button className="btn btn-danger ">Clear</button>
-        </div>
+        <h4 className=" text-center text-success pt">
+          <div className="mb-3">
+            <button className="btn btn-danger " onClick={props.submit}>
+              Clear
+            </button>
+          </div>
+        </h4>
       </div>
     ) : (
       ""

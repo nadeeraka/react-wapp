@@ -72,6 +72,21 @@ class App extends Component {
       main: data.weather[0].main
     });
   };
+  submit = () => {
+    this.setState({
+      temp: "",
+      temp_max: "",
+      temp_min: "",
+      humidity: "",
+      pressure: "",
+      wind: "",
+      description: "",
+      main: "",
+      name: "",
+      error: "",
+      IsOpen: false
+    });
+  };
   render() {
     return (
       <div className="container">
@@ -88,6 +103,7 @@ class App extends Component {
           description={this.state.description}
           main={this.state.main}
           error={this.state.error}
+          submit={this.submit}
         />
       </div>
     );
