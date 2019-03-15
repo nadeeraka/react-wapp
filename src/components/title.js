@@ -2,10 +2,11 @@ import React from "react";
 const Title = () => {
   return (
     <div>
-      <h1 className="text-center mt-5 mb-3 cc">Weather App</h1>
-      <h3 className="text-center mt-2 mb-5 text-light">
-        Simple and easy to use util app
-      </h3>
+      <nav className="navbar navbar-dark bg-primary">
+        <span className="navbar-brand mb-0 h1 mx-auto font2">
+          <h2 className="cd">getDecision</h2>
+        </span>
+      </nav>
     </div>
   );
 };

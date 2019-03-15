@@ -14,14 +14,19 @@ const customStyles = {
 const AlertModal = props => (
   <div>
     <Modal
-      isOpen={props.isOpen}
+      isOpen={props.decisions.open}
       onRequestClose={props.closeModal}
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <h1 className="text-center text-danger mt-5 mb-3  Hello">Alert</h1>
+      <h3 className="text-center text-success mt-5 mb-3 cd">
+        Perfect choice is
+      </h3>
       <div>
-        <h3 className="text-center text-success cc">details</h3>
+        <h1 className="text-center text-danger  hc">
+          {" "}
+          {props.decisions.decision}
+        </h1>
       </div>
       <button
         onClick={props.closeModal}

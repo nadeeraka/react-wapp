@@ -6,29 +6,30 @@ const Form = props => {
       {props.temp ? (
         ""
       ) : (
-        <div className="card os">
-          <h5 className="card-header">Search weather</h5>
+        <div className="card mt-5">
+          <h5 className="card-header text-center">Type your decision</h5>
           <div className="card-body">
-            <form onSubmit={props.getWhether}>
+            <form onSubmit={props.onDecision}>
               <div className="form-group">
                 <input
                   type="text"
-                  name="country"
+                  name="decision"
                   className="form-control mb-3"
                   id="exampleInputEmail1"
-                  placeholder="Country name"
-                />
-
-                <input
-                  type="text"
-                  name="city"
-                  className="form-control "
-                  id="cty"
-                  aria-describedby="emailHelp"
-                  placeholder="City name"
+                  placeholder="example read newspaper"
                 />
               </div>
-              <button className="btn btn-info">Get weather</button>
+              <div className="text-center">
+                <button className="btn btn-info  btn-lg mr-3" type="submit">
+                  Add a decision
+                </button>
+                <button
+                  className="btn btn-danger btn-lg"
+                  onClick={props.onReset}
+                >
+                  Delete all
+                </button>
+              </div>
             </form>
           </div>
         </div>
